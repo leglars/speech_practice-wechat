@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="cardContainer">
+    <view class="userinfo">
+      <image bindtap="bindAvatarTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <text class="userinfo-status">{{status.label[status.value]}}</text>
+    </view>
+    <view class="userdata">
+      <block wx:for="{{userdata.label}}"
+             wx:key="{{userdata.labelMapToKey}}">
+        <view class="userdata-item">
+          <text class="userdata-label">{{item}}</text>
+          <view class="userdata-space"></view>
+          <text class="userdata-data">
+            {{userdata.data[userdata.labelMapToKey[index]]}}
+          </text>
+        </view>
+      </block>
+      
+      <view class="userdata-availabe"></view>
+      <view class="userdata-point"></view>
+    </view>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+    <button bindtap="changeWord">Click to Change</button>
+  </view>
+</view>
