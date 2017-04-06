@@ -1,7 +1,13 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+
+    "pages/course/intro/intro",
+    "pages/course/enrollment/enrollment",
+
+    "pages/payment/confirm/confirm",
+    "pages/payment/result/result"
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -1,0 +1,5 @@
+<template name="footer">  
+  <view class="copyright">
+    <text>copyright @ 2017 合肥学道吉教育科技有限公司</text>
+  </view>
+</template>
