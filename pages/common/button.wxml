@@ -8,3 +8,8 @@
             size="mini"
             disabled="true">未按时</button>
 </template>
+
+<template name="activeButtonLarge">
+    <button type="primary"
+            size="default">查看最经课程</button>
+</template>

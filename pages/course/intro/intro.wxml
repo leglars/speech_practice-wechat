@@ -1,0 +1,34 @@
+<import src="../../common/footer" />
+<import src="../../common/button" />
+
+<view class="container-white">
+    <view class="article">
+        <view class="article-header">
+            <view class="title">
+                <text>{{title}}</text>
+            </view>
+            <view class="article-meta">
+                <text>{{date}} {{author}}</text> <text class="highlight">{{officalAccount.name}}</text>
+            </view>
+        </view>
+        <view class="article-image">
+            <image src="{{titleImage.src}}" alt="{{titleImage.alt}}"/>
+        </view>
+        <view class="article-content">
+            <block wx:for="{{content}}" wx:key="*this">
+                <text class="p">{{item}}</text>
+            </block>
+        </view>
+    </view>
+
+    <view class="page-prompt">
+        <view class="prompt-wrap">
+            <navigator url="/pages/course/enrollment/enrollment"
+                       open-type="navigate">
+                <template is="activeButtonLarge" />
+            </navigator>
+        </view>
+    </view>
+    
+    <template is="footer" />
+</view>

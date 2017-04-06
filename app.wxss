@@ -11,6 +11,16 @@
   background-color: #EFEFF4;
 } 
 
+.container-white {
+  display: flex;
+  flex-direction: column;
+  height:100%;
+  min-height: 1335rpx;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
 .cardContainer {
   margin-top: 20rpx;
   background-color: #fff;
