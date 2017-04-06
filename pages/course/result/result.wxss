@@ -1,0 +1,36 @@
+.result {
+    width: 686rpx;
+    text-align: center;
+}
+
+.body {
+    padding: 64rpx 168rpx;
+}
+
+.icon image {
+    width: 186rpx;
+    height: 186rpx;
+    margin: 64rpx 0;
+}
+
+.title {
+    /* Label: */
+    font-size: 40rpx;
+    color: #000000;
+    margin-bottom: 64rpx;
+}
+
+.content {
+    font-size: 28rpx;
+    color: #888888;
+    line-height: 40rpx;
+    text-align: left;
+}
+
+.page-prompt {
+    margin-top: 64rpx;
+}
+
+.page-prompt view {
+    margin-top: 24rpx;
+}

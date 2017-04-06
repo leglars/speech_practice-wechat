@@ -54,10 +54,16 @@ Page({
                 },
             });
         }
+
+        // success get data
+        // set user status
+        // navigateTo
+
         wx.navigateTo({
             url: "/pages/course/result/result"
         })
         
+
     },
     onLoad: function() {
 

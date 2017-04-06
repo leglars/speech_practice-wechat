@@ -14,3 +14,8 @@
             size="default"
             loading="{{data.loading}}">{{data.label}}</button>
 </template>
+
+<template name="returnButton">
+    <button type="default"
+            size="default">返回</button>
+</template>
