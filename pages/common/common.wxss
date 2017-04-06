@@ -1,0 +1,57 @@
+.textSnipWithArrow {
+    display: block;
+    padding: 48rpx 56rpx;
+}
+
+.textSnip {
+    width: 580rpx;
+}
+
+.textSnipTitle {
+    font-size: 36rpx;
+    color: #000000;
+    margin-bottom: 36rpx;
+}
+
+.textSnipContent {
+    text-indent: 52rpx;
+    font-size: 26rpx;
+    color: #9B9B9B;
+    line-height: 37rpx;
+    margin-bottom: 12rpx;
+}
+
+.arrow {
+    padding-right: 20rpx;
+    padding-left: 64rpx;
+    width: 16rpx;
+    position: absolute;
+    top: 50%;
+    margin-top: -18rpx;
+    right: 16rpx;
+}
+
+.arrow image {
+    vertical-align: middle;
+    color: #c7c7c7;
+    width: 36rpx;
+    height: 36rpx;
+}
+
+.textSnipWithoutArrow, .gradeTrend {
+    display: block;
+    padding: 48rpx 56rpx 36rpx 56rpx;
+}
+
+.textSnipWithoutArrow .textSnipContent {
+    margin-bottom: 0;
+}
+
+.cardButton {
+    text-align: center;
+    padding: 24rpx 0;
+    border-top: 1rpx solid #e5e5e5;
+    font-size: 36rpx;
+    color: #09BB07;
+}
+

@@ -1,10 +1,12 @@
 /**app.wxss**/
+@import './pages/common/common.wxss';
+
 .container {
-  height: 100%;
   display: flex;
   flex-direction: column;
+  height:100%;
+  min-height: 1335rpx;
   align-items: center;
-  justify-content: space-between;
   box-sizing: border-box;
   background-color: #EFEFF4;
 } 
@@ -13,5 +15,76 @@
   margin-top: 20rpx;
   background-color: #fff;
   width: 100%;
-  
+  position: relative;
+  border-top: 1rpx solid #e5e5e5;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+/*.cardContainer:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1rpx;
+  border-top: 1rpx solid #e5e5e5;
+}
+
+.cardContainer:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1rpx solid #e5e5e5;
+}*/
+
+.cell {
+  border-top: 1rpx solid #e5e5e5;
+  padding: 24rpx 56rpx;
+  position: relative;
+  display: block;
+}
+
+.cell:first-child {
+  border-top: 0;
+}
+
+.cell:after {
+  clear: both;
+  display: table;
+  content: " ";
+}
+
+.cell-label {
+  font-size: 34rpx;
+  color: #343434;
+  letter-spacing: 0;
+}
+
+.cell-label-highlight {
+  font-size: 34rpx;
+  color: #000;
+}
+
+.highlight {
+  color: #576B95;
+  font-weight: 500;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.copyright {
+  /* Copyright @ 2017 合肥学: */
+  position: absolute;
+  bottom: 12rpx;
+  font-size: 20rpx;
+  color: #B2B2B2;
 }

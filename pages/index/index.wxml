@@ -1,4 +1,8 @@
 <!--index.wxml-->
+<import src="../common/textSnipTemplate" />
+<import src="../common/cardButton"/>
+<import src="../common/button" />
+
 <view class="container">
   <view class="cardContainer">
     <view class="userinfo">
@@ -10,20 +14,87 @@
       <block wx:for="{{userdata.label}}"
              wx:key="{{userdata.labelMapToKey}}">
         <view class="userdata-item">
-          <text class="userdata-label">{{item}}</text>
-          <view class="userdata-space"></view>
-          <text class="userdata-data">
-            {{userdata.data[userdata.labelMapToKey[index]]}}
-          </text>
+          <view class="userdata-label">
+            <text>{{item}}</text>
+          </view>
+          <view class="userdata-data">
+            <text>{{userdata.data[userdata.labelMapToKey[index]]}}</text>
+          </view>
         </view>
       </block>
-      
-      <view class="userdata-availabe"></view>
-      <view class="userdata-point"></view>
     </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-    <button bindtap="changeWord">Click to Change</button>
+
+  <block wx:if="{{!status.value}}">
+    <view class="cardContainer">
+      <template is="textSnipWithArrow"
+                data="{{data: introduction}}" />
+    </view>
+  </block>
+
+  <block wx:elif="{{status.value == 1}}">
+    <view class="cardContainer">
+      <template is="textSnip" data="{{data: introduction}}" />
+      <template is="cardButton" data="{{text: '付款'}}" />
+    </view>
+  </block>
+
+  <block wx:elif="{{status.value == 2}}">
+    <view class="cardContainer">
+      <view class="cell">
+        <view class="left"><text class="cell-label">口语训练营</text></view>
+        <view class="right">
+          <text class="cell-label-highlight">第 <text class="highlight">{{userdata.course}}</text> 天</text>
+        </view>
+      </view>
+      <view class="cell">
+
+        <block wx:if="{{userdata.practiceStatus < 3}}">
+          <view class="left"><text class="cell-label">今日练习</text></view>
+          <view class="right">
+            <block wx:if="{{!userdata.practiceStatus}}">
+              <template is="activeButton" />
+            </block>
+            <block wx:elif="{{userdata.practiceStatus == 1}}">
+              <template is="disabledWarningButton" />
+            </block>
+          </view>
+        </block>
+
+        <block wx:elif="{{userdata.practiceStatus > 3}}">
+            <view class="left"><text class="cell-label">今日练习</text></view>
+            <view class="right">
+              <view class="grade">{{userdata.grade}}</view>
+              <view class="arrow">
+                <image src="../image/Chevron_Right.png"></image>
+              </view>
+            </view>
+              
+        </block>
+
+      </view>
+    </view>
+
+    <view class="cardContainer">
+      <view class="gradeTrend">
+        <view class="gradeGraph">
+            <view class="userdata-label">
+                <text>成绩趋势</text>
+            </view>
+            <view class="graph">
+          
+            </view>
+        </view>
+        <view class="arrow">
+            <image src="../image/Chevron_Right.png"></image>
+        </view>
+    </view>  
+    </view>
+  </block>
+  
+
+  <view class="copyright">
+    <text>copyright @ 2017 合肥学道吉教育科技有限公司</text>
   </view>
+
 </view>

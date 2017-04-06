@@ -1,5 +1,6 @@
 /**index.wxss**/
 .userinfo {
+  height: 274rpx;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,8 +34,8 @@
 .userdata {
   width: 100%;
   display: flex;
-  border-top-color: #979797;
-  padding: 12rpx 64rpx 24rpx 64rpx
+  border-top: 1rpx solid #e5e5e5;
+  padding: 24rpx 64rpx 40rpx 64rpx
 }
 
 .userdata-item {
@@ -49,12 +50,23 @@
 .userdata-label {
   font-size: 28rpx;
   color: #888888;
-  display: block;
+  margin-bottom: 30rpx;
 }
 
 .userdata-data {
 font-weight: 100;
 font-size: 48rpx;
 color: #000000;
-display: block;
+}
+
+.grade {
+    font-size: 48rpx;
+    font-weight: 200;
+    color: #576B95;
+    padding-right: 72rpx;
+}
+
+.gradeGraph {
+  display: inline-block;
+  width: 580rpx;
 }

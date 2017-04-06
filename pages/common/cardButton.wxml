@@ -1,0 +1,5 @@
+<template name="cardButton">
+    <view class="cardButton">
+        <text>{{text}}</text>
+    </view>
+</template>

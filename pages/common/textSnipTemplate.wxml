@@ -1,0 +1,26 @@
+<template name="textSnipWithArrow">
+    <view class="textSnipWithArrow">
+        <view class="textSnip">
+            <view class="textSnipTitle">
+                <text>{{data.title}}</text>
+            </view>
+            <view class="textSnipContent">
+                <text>{{data.content}}</text>
+            </view>
+        </view>
+        <view class="arrow">
+            <image src="../image/Chevron_Right.png"></image>
+        </view>
+    </view>  
+</template>
+
+<template name="textSnip">
+    <view class="textSnipWithoutArrow">
+        <view class="textSnipTitle">
+            <text>{{data.title}}</text>
+        </view>
+        <view class="textSnipContent">
+            <text>{{data.content}}</text>
+         </view>
+    </view>
+</template>

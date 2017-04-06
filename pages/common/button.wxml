@@ -1,0 +1,10 @@
+<template name="activeButton">
+    <button type="primary"
+            size="mini">去完成</button>
+</template>
+
+<template name="disabledWarningButton">
+    <button type="warn"
+            size="mini"
+            disabled="true">未按时</button>
+</template>
