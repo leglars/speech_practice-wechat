@@ -5,6 +5,7 @@
 
     "pages/course/intro/intro",
     "pages/course/enrollment/enrollment",
+    "pages/course/result/result",
 
     "pages/payment/confirm/confirm",
     "pages/payment/result/result"

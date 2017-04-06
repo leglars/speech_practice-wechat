@@ -46,14 +46,7 @@ Page({
         })
     },
     bindPrompt: function(e) {
-        if(this.data.buttonState.loading) {
-            this.setData({
-                buttonState: {
-                    label: "报名",
-                    loading: false,
-                },
-            });
-        } else {
+        if(!this.data.buttonState.loading) {
             this.setData({
                 buttonState: {
                     label: "报名",
@@ -61,6 +54,9 @@ Page({
                 },
             });
         }
+        wx.navigateTo({
+            url: "/pages/course/result/result"
+        })
         
     },
     onLoad: function() {
