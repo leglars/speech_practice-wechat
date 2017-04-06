@@ -2,6 +2,7 @@
 <import src="../common/textSnipTemplate" />
 <import src="../common/cardButton"/>
 <import src="../common/button" />
+<import src="../common/footer" />
 
 <view class="container">
   <view class="cardContainer">
@@ -25,13 +26,18 @@
     </view>
   </view>
 
+  <!--visitor: introduction-->
   <block wx:if="{{!status.value}}">
     <view class="cardContainer">
-      <template is="textSnipWithArrow"
-                data="{{data: introduction}}" />
+      <navigator url="/pages/course/intro/intro"
+                open-type="navigate">
+          <template is="textSnipWithArrow"
+                    data="{{data: introduction}}" />
+      </navigator>
     </view>
   </block>
 
+  <!--enrollment: payment notification-->
   <block wx:elif="{{status.value == 1}}">
     <view class="cardContainer">
       <template is="textSnip" data="{{data: introduction}}" />
@@ -39,8 +45,10 @@
     </view>
   </block>
 
+  <!--student-->
   <block wx:elif="{{status.value == 2}}">
-    <view class="cardContainer">
+    <!--student: practice card-->
+    <view class="cardContainer"> 
       <view class="cell">
         <view class="left"><text class="cell-label">口语训练营</text></view>
         <view class="right">
@@ -49,18 +57,25 @@
       </view>
       <view class="cell">
 
+        <!--practice card: non-release grade-->
+        <!--practice status < 3  => grade non-release-->
+        <!--practice status == 0 => practice release-->
+        <!--practice status == 1 => overdue-->
         <block wx:if="{{userdata.practiceStatus < 3}}">
           <view class="left"><text class="cell-label">今日练习</text></view>
           <view class="right">
+            <!--practice release-->
             <block wx:if="{{!userdata.practiceStatus}}">
               <template is="activeButton" />
             </block>
+            <!--practice overdue-->
             <block wx:elif="{{userdata.practiceStatus == 1}}">
               <template is="disabledWarningButton" />
             </block>
           </view>
         </block>
 
+        <!--grade release-->
         <block wx:elif="{{userdata.practiceStatus > 3}}">
             <view class="left"><text class="cell-label">今日练习</text></view>
             <view class="right">
@@ -75,6 +90,7 @@
       </view>
     </view>
 
+    <!--student: grade trend card-->
     <view class="cardContainer">
       <view class="gradeTrend">
         <view class="gradeGraph">
@@ -92,9 +108,6 @@
     </view>
   </block>
   
-
-  <view class="copyright">
-    <text>copyright @ 2017 合肥学道吉教育科技有限公司</text>
-  </view>
+<template is="footer" />
 
 </view>
