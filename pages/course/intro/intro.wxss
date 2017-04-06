@@ -32,6 +32,7 @@
     font-size: 30rpx;
     color: #343434;
     line-height: 48.54rpx;
+    text-indent: 60rpx;
 }
 
 .article-content .p {

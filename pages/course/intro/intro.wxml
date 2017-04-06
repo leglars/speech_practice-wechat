@@ -8,7 +8,8 @@
                 <text>{{title}}</text>
             </view>
             <view class="article-meta">
-                <text>{{date}} {{author}}</text> <text class="highlight">{{officalAccount.name}}</text>
+                <text>{{date}}　{{author}}</text>
+                <text class="highlight">　　　{{officalAccount.name}}</text>
             </view>
         </view>
         <view class="article-image">
