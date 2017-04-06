@@ -26,7 +26,7 @@
         <view class="prompt-wrap">
             <navigator url="/pages/course/enrollment/enrollment"
                        open-type="navigate">
-                <template is="activeButtonLarge" />
+                <template is="activeButtonLarge" data="{{data: buttonState}}"/>
             </navigator>
         </view>
     </view>

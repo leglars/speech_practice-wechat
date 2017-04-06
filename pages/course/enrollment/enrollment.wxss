@@ -1,0 +1,21 @@
+.picker {
+    font-size: 34rpx;
+    color: #000000;
+}
+
+.picker-label, .picker-content {
+    display: inline-block;
+}
+
+.picker-label {
+    margin-right: 32rpx;
+}
+
+.page-prompt {
+    width: 100%;
+    border-top: 1rpx solid #e5e5e5;
+}
+
+.prompt-wrap {
+    padding: 40rpx 32rpx;
+}

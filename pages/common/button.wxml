@@ -11,5 +11,6 @@
 
 <template name="activeButtonLarge">
     <button type="primary"
-            size="default">查看最经课程</button>
+            size="default"
+            loading="{{data.loading}}">{{data.label}}</button>
 </template>

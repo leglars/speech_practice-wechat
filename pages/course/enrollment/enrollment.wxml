@@ -1,0 +1,47 @@
+<import src="../../common/footer" />
+<import src="../../common/button" />
+
+<view class="container">
+    <view class="cardContainer">
+        <view class="cell">
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                <view class="picker">
+                    <label>
+                        <view class="picker-label">开始课程</view>
+                        <view class="picker-content">{{array[index]}}</view>
+                    </label>
+                </view>
+            </picker>
+        </view>
+        <view class="cell">
+            <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+                <view class="picker">
+                    <label>
+                        <view class="picker-label">报名期数</view>
+                        <view class="picker-content">{{time}}</view>
+                    </label>
+                </view>
+            </picker>
+        </view>
+        <view class="cell">
+            <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+                <view class="picker">
+                    <label>
+                        <view class="picker-label">课程类别</view>
+                        <view class="picker-content">{{date}}</view>
+                    </label>
+                </view>
+            </picker>
+        </view>
+    </view>
+
+    <view class="page-prompt">
+        <view class="prompt-wrap">
+            <view bindtap="bindPrompt">
+                <template is="activeButtonLarge" data="{{data: buttonState}}"/>
+            </view>
+        </view>
+    </view>
+
+    <template is="footer" />
+</view>
