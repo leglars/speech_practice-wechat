@@ -59,8 +59,17 @@ Page({
         // set user status
         // navigateTo
 
-        wx.navigateTo({
-            url: "/pages/course/result/result"
+        wx.redirectTo({
+            url: "/pages/course/result/result",
+            success: function(res){
+                // success
+            },
+            fail: function() {
+                // fail
+            },
+            complete: function() {
+                // complete
+            }
         })
         
 

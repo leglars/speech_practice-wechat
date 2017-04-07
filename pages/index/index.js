@@ -38,6 +38,11 @@ Page({
     })
   },
 
+  onShow: function() {
+    // check user status
+    console.log("get user status")
+  },
+
   onLoad: function () {
     console.log('onLoad')
     var that = this
