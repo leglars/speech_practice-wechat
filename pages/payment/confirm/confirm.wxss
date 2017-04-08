@@ -1,0 +1,18 @@
+.cell-label {
+    font-size: 34rpx;
+    color: #000000;
+    letter-spacing: 0;
+}
+
+.cell-content {
+    font-size: 34rpx;
+    color: #343434;
+    letter-spacing: 0;
+    text-align: right
+}
+
+.cell-number {
+    font-size: 48rpx;
+    color: #000000;
+    text-align: left
+}

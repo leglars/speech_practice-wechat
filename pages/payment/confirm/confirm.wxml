@@ -1,0 +1,22 @@
+<import src="../../common/footer" />
+
+<view class="container">
+    <view class="cardContainer">
+        <view class="cell">
+            <label>
+                <view class="cell-label">商品</view>
+                <view class="cell-content">{{payItem}}</view>
+            </label>
+        </view>
+        <view class="cell">
+            <view class="cell-label">金额</view>
+            <view class="cell-number">${{amount}}</view>
+        </view>
+        <view class="cell"></view>
+        <view class="cell"></view>
+        <view class="cell"></view>
+        <view class="cell"></view>
+    </view>
+
+    <template is="footer" />
+</view>
