@@ -5,7 +5,7 @@ Page({
   data: {
     userInfo: {},
     status: {
-      value: 0,
+      value: 1,
       label: ["游客", "已注册", "学员"],
     },
     userdata: {

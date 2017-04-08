@@ -41,7 +41,12 @@
   <block wx:elif="{{status.value == 1}}">
     <view class="cardContainer">
       <template is="textSnip" data="{{data: introduction}}" />
-      <template is="cardButton" data="{{text: '付款'}}" />
+      
+      <navigator url="/pages/payment/confirm/confirm"
+                 open-type="navigate">
+        <template is="cardButton" 
+                  data="{{text: '付款'}}" />
+      </navigator>
     </view>
   </block>
 

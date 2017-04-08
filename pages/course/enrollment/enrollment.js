@@ -55,10 +55,14 @@ Page({
             });
         }
 
+        console.log("upload enroll info");
+        console.log("update user status");
+
         // success get data
-        // set user status
+        // update user status
         // navigateTo
 
+        // put enroll info in url & send to result page
         wx.redirectTo({
             url: "/pages/course/result/result",
             success: function(res){
@@ -75,6 +79,6 @@ Page({
 
     },
     onLoad: function() {
-
+        // get recent course information from server.
     }
 })

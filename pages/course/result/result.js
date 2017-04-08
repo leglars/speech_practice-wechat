@@ -17,9 +17,12 @@ Page({
     bindPrompt: function () {
 
         wx.redirectTo({
-            url: this.data.promptPath,
+            url: this.data.returnPath,
             success: function(res){
                 // success
+                wx.redirectTo({
+                    url: "/pages/course/intro/intro"
+                })
             },
             fail: function() {
                 // fail
@@ -32,15 +35,15 @@ Page({
     bindReturn: function () {
         const delta = getCurrentPages().length - 1;
         wx.navigateBack({
-            delta: delta
+            delta: delt
         })
     },
 
-    onReady: function() {
+    onLoad: function() {
+        // get enroll info from enroll page and set data
+        console.log("get enroll result.")
         // set returnPath & promptPath
         // set buttonState
-    },
-    onLoad: function() {
-
+        // construct the content with enroll page data
     }
 });
