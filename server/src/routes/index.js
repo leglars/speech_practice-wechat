@@ -8,6 +8,7 @@ router.get('/', require('./welcome'));
 // router.get('/user', require('./user'));
 // router.all('/tunnel', require('./tunnel'));
 router.get('/hello', require('./helloworld'));
+router.get('/get-user-data', require('./getUserData'));
 
 
 

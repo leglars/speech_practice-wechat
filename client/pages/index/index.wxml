@@ -9,17 +9,17 @@
     <view class="userinfo">
       <image bindtap="bindAvatarTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-      <text class="userinfo-status">{{status.label[status.value]}}</text>
+      <text class="userinfo-status">{{labels.statusLabel[userdata.status]}}</text>
     </view>
     <view class="userdata">
-      <block wx:for="{{userdata.label}}"
-             wx:key="{{userdata.labelMapToKey}}">
+      <block wx:for="{{labels.infoLabel}}"
+             wx:key="{{labels.labelMapToKey}}">
         <view class="userdata-item">
           <view class="userdata-label">
             <text>{{item}}</text>
           </view>
           <view class="userdata-data">
-            <text>{{userdata.data[userdata.labelMapToKey[index]]}}</text>
+            <text>{{userdata.data[labels.labelMapToKey[index]]}}</text>
           </view>
         </view>
       </block>
@@ -27,7 +27,7 @@
   </view>
 
   <!--visitor: introduction-->
-  <block wx:if="{{!status.value}}">
+  <block wx:if="{{!userdata.status}}">
     <view class="cardContainer">
       <navigator url="/pages/course/intro/intro"
                 open-type="navigate">
@@ -38,7 +38,7 @@
   </block>
 
   <!--enrollment: payment notification-->
-  <block wx:elif="{{status.value == 1}}">
+  <block wx:elif="{{userdata.status == 1}}">
     <view class="cardContainer">
       <template is="textSnip" data="{{data: introduction}}" />
       
@@ -51,13 +51,13 @@
   </block>
 
   <!--student-->
-  <block wx:elif="{{status.value == 2}}">
+  <block wx:elif="{{userdata.status == 2}}">
     <!--student: practice card-->
     <view class="cardContainer"> 
       <view class="cell">
         <view class="left"><text class="cell-label">口语训练营</text></view>
         <view class="right">
-          <text class="cell-label-highlight">第 <text class="highlight">{{userdata.course}}</text> 天</text>
+          <text class="cell-label-highlight">第 <text class="highlight">{{practice.course}}</text> 天</text>
         </view>
       </view>
       <view class="cell">
@@ -81,10 +81,10 @@
         </block>
 
         <!--grade release-->
-        <block wx:elif="{{userdata.practiceStatus > 3}}">
+        <block wx:elif="{{practice.practiceStatus > 3}}">
             <view class="left"><text class="cell-label">今日练习</text></view>
             <view class="right">
-              <view class="grade">{{userdata.grade}}</view>
+              <view class="grade">{{practice.grade}}</view>
               <view class="arrow">
                 <image src="../image/Chevron_Right.png"></image>
               </view>

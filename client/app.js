@@ -3,7 +3,8 @@ App({
 
 // host url
   config: {
-        host: 'localhost:5757'
+    // this is a ngrok tunnel to localhost:5757
+        host: 'a37d12d7.ngrok.io'
     },
 
   onLaunch: function () {
