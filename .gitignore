@@ -3,3 +3,5 @@ typings
 jsconfig.json
 .idea
 node_modules
+.bower
+bower_components
